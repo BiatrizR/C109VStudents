@@ -51,25 +51,7 @@ def countFingers(image, hand_landmarks, handNo=0):
         totalFingers = fingers.count(1)
         
         #! REPRODUZA ou PAUSE um Vídeo
-        if totalFingers == 4:
-            state = "Play"
-
-        if totalFingers == 0 and state == "Play":
-            state = "Pause"
-            keyboard.press(Key.space)
-
-         # Mova o Vídeo PARA A FRENTE e PARA TRÁS 
-        finger_tip_x = (landmarks[8].x)*width
- 
-        if totalFingers == 1:
-            if  finger_tip_x < width-400:
-                print("Reproduzir Para Trás")
-                keyboard.press(Key.left)
-
-            if finger_tip_x > width-50:
-                print("Reproduzir Para a Frente")
-                keyboard.press(Key.right)
-        
+      
         
 #! Defina uma função para 
 def drawHandLanmarks(image, hand_landmarks):
