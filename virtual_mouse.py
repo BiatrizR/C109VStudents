@@ -83,15 +83,7 @@ def countFingers(image, hand_landmarks, handNo=0):
 		mouse.position = (relative_mouse_x, relative_mouse_y)
 
 		# *Verifique as condições de formação da PINÇA
-		if distance > 40:
-			if pinch == True:
-				pinch = False			
-				mouse.release(Button.left)
-
-		if distance <= 40 :
-			if(pinch==False):
-				pinch=True
-				mouse.press(Button.left)
+	
 
 
 # Defina uma função para 
